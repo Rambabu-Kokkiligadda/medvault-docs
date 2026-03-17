@@ -142,11 +142,11 @@
 
 <header>
   <h1>🛡️ MyMedVault</h1>
-  <p>Beta Tester Guide — Version 1.3.0</p>
+  <p>Beta Tester Guide — Version 1.4.3</p>
   <div>
     <span class="badge">Android</span>
     <span class="badge">Beta</span>
-    <span class="badge">v1.3.0</span>
+    <span class="badge">v1.4.3</span>
   </div>
   <a class="cta-btn" href="https://play.google.com/store/apps/details?id=io.medvault.app" target="_blank">
     📱 Download on Google Play
@@ -174,17 +174,17 @@
     <div class="feature-card">
       <div class="icon">📄</div>
       <h3>Document Upload</h3>
-      <p>Upload PDFs or photos. Assign to yourself or a family member. Choose document type (Lab, Prescription, Invoice, etc.).</p>
+      <p>Upload PDFs or photos. Shoot directly with the camera or pick from gallery/files. Upload up to <strong>10 files at once</strong>. Assign to yourself or a family member.</p>
     </div>
     <div class="feature-card">
       <div class="icon">🤖</div>
       <h3>AI Processing</h3>
-      <p>OCR extracts all text. Gemini AI generates plain-English summaries. Auto-categorisation and structured data extraction.</p>
+      <p>OCR extracts all text (including structured tables). Gemini AI generates plain-English summaries. Supports <strong>Regenerate Insights</strong> to refresh AI output on any existing document.</p>
     </div>
     <div class="feature-card">
       <div class="icon">🗂️</div>
       <h3>Smart Organisation</h3>
-      <p>Filter by category chips, filter by family member, full-text search across all document content.</p>
+      <p>Filter by category chips (including <strong>Imaging</strong>), multi-select filter sheet, filter by family member, full-text search across all document content.</p>
     </div>
     <div class="feature-card">
       <div class="icon">👨‍👩‍👧</div>
@@ -198,8 +198,8 @@
     </div>
     <div class="feature-card">
       <div class="icon">🔔</div>
-      <h3>Reminders</h3>
-      <p>Set document-related reminders with local push notifications. Access via ⋮ menu → Reminders.</p>
+      <h3>Reminders &amp; Vaccination</h3>
+      <p>Set document-related reminders with local push notifications. Access a full <strong>WHO/India vaccination schedule</strong> (16 doses) with age-based reminders. Access via ⋮ menu → Reminders.</p>
     </div>
     <div class="feature-card">
       <div class="icon">📤</div>
@@ -226,19 +226,25 @@
     <ul>
       <li>Tap the <strong>+ button</strong> on the home screen to upload.</li>
       <li>Choose from: <strong>Camera, Gallery, or Files</strong>.</li>
+      <li><strong>Multi-upload:</strong> select up to <strong>10 files at once</strong> from gallery or file picker.</li>
+      <li><strong>Camera scan:</strong> shoot a document directly in the app — files over 10 MB are rejected with a clear error.</li>
       <li>Supported formats: <strong>PDF, JPG, PNG</strong>.</li>
-      <li>Set a title, document type (Lab Report, Prescription, Invoice, Insurance, X-Ray, Scan, Certificate, Other), and assign to a family member.</li>
-      <li>Processing happens in the background — you'll receive a <strong>push notification</strong> when the AI is done.</li>
+      <li>Set a title, document type (Lab Report, Prescription, Invoice, Insurance, <strong>Imaging / X-Ray</strong>, Scan, Certificate, Other), and assign to a family member.</li>
+      <li>Each document card shows a <strong>person name pill</strong> ("Self" or the family member’s name) so you always know whose record it is at a glance.</li>
+      <li>Processing happens in the background — you’ll receive a <strong>push notification</strong> when the AI is done.</li>
+      <li>Non-medical documents (receipts, certificates) are still accepted and flagged as <strong>"Non-Medical Document"</strong> in the AI summary.</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>🤖 AI Processing Pipeline</h3>
     <ul>
-      <li><strong>Step 1 — OCR:</strong> Google Cloud Vision API extracts all text from your document image/PDF.</li>
-      <li><strong>Step 2 — AI Summary:</strong> Google Gemini reads the extracted text and writes a plain-English summary of what the document says.</li>
+      <li><strong>Step 1 — OCR:</strong> Google Cloud Vision API extracts all text from your document image/PDF, with English language optimisation for accurate results.</li>
+      <li><strong>Step 2 — AI Summary:</strong> Google Gemini reads the extracted text and writes a plain-English summary including patient info, a structured table of test results (with reference ranges &amp; status), imaging/scan findings, and prescription details with dosage and frequency.</li>
       <li><strong>Step 3 — Categorisation:</strong> AI automatically assigns the document to a category (Lab, Prescription, Imaging, etc.).</li>
       <li><strong>Step 4 — Record Extraction:</strong> Key data points are extracted as structured records (dates, values, names, dosages).</li>
+      <li><strong>Regenerate Insights:</strong> On any existing document, tap the <strong>⋮ (overflow) menu → Regenerate Insights</strong>, or tap the inline button on the Insights tab. A spinner shows progress and you’ll see a success or error message.</li>
+      <li>Wide tables (e.g. full lab panels) are horizontally scrollable on small screens.</li>
       <li>If old documents don't have a category, tap <strong>"Re-analyze Documents"</strong> on the empty category filter state.</li>
     </ul>
   </div>
@@ -246,8 +252,8 @@
   <div class="card">
     <h3>🗂️ Document Management</h3>
     <ul>
-      <li><strong>Home screen</strong> shows all documents as cards with thumbnail, title, date, and category badge.</li>
-      <li><strong>Category filter chips</strong> (top of list) — tap to filter by Lab, Prescription, Imaging, Invoice, Insurance, Other.</li>
+      <li><strong>Home screen</strong> shows all documents as cards with thumbnail, title, date, category badge, and a <strong>person name pill</strong> showing who the document belongs to.</li>
+      <li><strong>Category filter chips</strong> (top of list) — tap to filter by Lab, Prescription, <strong>Imaging</strong>, Invoice, Insurance, Other. Tap the filter icon for a <strong>multi-select filter sheet</strong> to combine categories.</li>
       <li><strong>Family switcher</strong> (top bar chips) — switch between "Mine" and each family member's documents.</li>
       <li><strong>Search</strong> (magnifier icon) — searches across all AI-extracted text content, not just titles.</li>
       <li>Tap any search result to go directly to that document's detail page.</li>
@@ -262,6 +268,18 @@
       <li>Enter name and relation (Spouse, Parent, Child, Sibling, Grandparent, Other).</li>
       <li>During document upload, choose which family member the document belongs to.</li>
       <li>Switch between family members using the chips below the search bar on the home screen.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>💉 Vaccination Reminders</h3>
+    <ul>
+      <li>Access via <strong>⋮ menu → Vaccination Reminders</strong> on the home screen.</li>
+      <li>Contains a full <strong>WHO/India schedule</strong> with 16 standard doses — BCG, Hepatitis B, OPV, DPT, Hib, Rotavirus, PCV, IPV, Measles, MMR, Varicella, and more.</li>
+      <li>Each vaccine shows the <strong>recommended age</strong> (e.g. at birth, 6 weeks, 9 months, 5 years).</li>
+      <li>Tap any vaccine to set a <strong>local push notification reminder</strong> for the due date.</li>
+      <li>Reminders work for all age groups — both children and adults (booster doses).</li>
+      <li>Reminder data is stored <strong>locally on your device</strong> and never sent to our servers.</li>
     </ul>
   </div>
 
@@ -290,14 +308,18 @@
     <ul class="step-list">
       <li><div class="step-num">1</div><div class="step-body"><strong>Become a tester:</strong><br>• <strong>On your Android phone/tablet:</strong> tap <a href="https://play.google.com/store/apps/details?id=io.medvault.app" target="_blank">this Play Store link</a> → tap Install / Update.<br>• <strong>On desktop/web first:</strong> open <a href="https://play.google.com/apps/testing/io.medvault.app" target="_blank">this opt-in link</a> → tap "Become a tester" → then open the Play Store link on your phone.</div></li>
       <li><div class="step-num">2</div><div class="step-body"><strong>Register</strong> — open the app, create an account with your email and a password.</div></li>
-      <li><div class="step-num">3</div><div class="step-body"><strong>Upload a document</strong> — tap the + button. Use any PDF or photo (a receipt, report, certificate — anything). Wait ~30 seconds for the AI notification.</div></li>
-      <li><div class="step-num">4</div><div class="step-body"><strong>View the document</strong> — tap it to see the original file, AI summary, and extracted data records.</div></li>
-      <li><div class="step-num">5</div><div class="step-body"><strong>Try search</strong> — tap the magnifier icon and type a word from your document. Tap the result to navigate to it.</div></li>
-      <li><div class="step-num">6</div><div class="step-body"><strong>Try category filters</strong> — tap the category chips on the home screen to filter documents.</div></li>
-      <li><div class="step-num">7</div><div class="step-body"><strong>Add a family member</strong> — account icon → Add Family Member. Upload a document for them. Switch profiles using the top chips.</div></li>
-      <li><div class="step-num">8</div><div class="step-body"><strong>Try biometric lock</strong> — minimise the app and reopen it. It should ask for your fingerprint/face.</div></li>
-      <li><div class="step-num">9</div><div class="step-body"><strong>Try trends</strong> — tap the chart icon in the top bar on the home screen.</div></li>
-      <li><div class="step-num">10</div><div class="step-body"><strong>Try reminders</strong> — tap the ⋮ menu → Reminders → add a reminder.</div></li>
+      <li><div class="step-num">3</div><div class="step-body"><strong>Upload a single document</strong> — tap the + button. Use any PDF or photo (a receipt, report, certificate — anything). Wait ~30 seconds for the AI notification.</div></li>
+      <li><div class="step-num">4</div><div class="step-body"><strong>Try multi-upload</strong> — tap + again and select multiple files (up to 10) at once. Each is processed independently.</div></li>
+      <li><div class="step-num">5</div><div class="step-body"><strong>Try camera scan</strong> — tap + → Camera. Take a photo of any document page. It uploads and processes just like a gallery file.</div></li>
+      <li><div class="step-num">6</div><div class="step-body"><strong>View a document</strong> — tap it to see the original file, AI summary (with structured table), and extracted data records.</div></li>
+      <li><div class="step-num">7</div><div class="step-body"><strong>Regenerate Insights</strong> — on any document detail page, tap the <strong>⋮ (overflow) menu → Regenerate Insights</strong>. A spinner appears and the Insights tab refreshes with updated AI output.</div></li>
+      <li><div class="step-num">8</div><div class="step-body"><strong>Try search</strong> — tap the magnifier icon and type a word from your document. Tap the result to navigate to it.</div></li>
+      <li><div class="step-num">9</div><div class="step-body"><strong>Try category filters</strong> — tap the category chips on the home screen. Tap the filter icon for the multi-select sheet to combine categories.</div></li>
+      <li><div class="step-num">10</div><div class="step-body"><strong>Add a family member</strong> — account icon → Add Family Member. Upload a document for them. Switch profiles using the top chips. Notice the person name pill on each card.</div></li>
+      <li><div class="step-num">11</div><div class="step-body"><strong>Try biometric lock</strong> — minimise the app and reopen it. It should ask for your fingerprint/face.</div></li>
+      <li><div class="step-num">12</div><div class="step-body"><strong>Try trends</strong> — tap the chart icon in the top bar on the home screen.</div></li>
+      <li><div class="step-num">13</div><div class="step-body"><strong>Try reminders</strong> — tap the ⋮ menu → Reminders → add a reminder for a document.</div></li>
+      <li><div class="step-num">14</div><div class="step-body"><strong>Try vaccination reminders</strong> — tap the ⋮ menu → Vaccination Reminders. Browse the WHO/India schedule and tap a vaccine to set a notification reminder.</div></li>
     </ul>
   </div>
 
@@ -368,6 +390,8 @@
       <li>Trends require at least 2 documents with numeric values to display charts</li>
       <li>AI processing requires an active internet connection</li>
       <li>Very large PDFs (&gt;20 MB) may take longer to process</li>
+      <li>Camera scan files over 10 MB are rejected — use gallery or compress the image first</li>
+      <li>Vaccination reminder notifications require the <strong>exact alarm permission</strong> to be granted on Android 12+ (the app will prompt you)</li>
     </ul>
   </div>
 
