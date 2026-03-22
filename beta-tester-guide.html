@@ -142,11 +142,11 @@
 
 <header>
   <h1>🛡️ MyMedVault</h1>
-  <p>Beta Tester Guide — Version 1.4.3</p>
+  <p>Beta Tester Guide — Version 1.6.0</p>
   <div>
     <span class="badge">Android</span>
     <span class="badge">Beta</span>
-    <span class="badge">v1.4.3</span>
+    <span class="badge">v1.6.0</span>
   </div>
   <a class="cta-btn" href="https://play.google.com/store/apps/details?id=io.medvault.app" target="_blank">
     📱 Download on Google Play
@@ -158,8 +158,9 @@
   <!-- What is it -->
   <h2>What is MyMedVault?</h2>
   <div class="card">
-    <p>MyMedVault is a <strong>personal document vault</strong> — a secure, private app to store, organise, and understand your important documents. Upload any PDF or photo of a document, and the app uses AI to extract the content, generate a plain-English summary, and organise it automatically.</p>
-    <p>It is <strong>not</strong> a medical advice app. It does not diagnose, treat, or recommend anything. It is a smart document organiser — like a digital filing cabinet with AI-powered reading capability.</p>
+    <p>MyMedVault is a <strong>personal medical document vault</strong> — scan and upload any health record (lab report, prescription, discharge summary, X-ray), and the app automatically verifies it is a genuine health document, checks your name matches, extracts AI health insights, and <strong>intelligently groups records into smart clusters</strong> — by visit episode, condition (e.g. all Thyroid records since 2009), document type, and month.</p>
+    <p>The core problem it solves: when you visit a doctor for a chronic or recurring condition, you can never remember all the past tests, medications, and dates. MyMedVault surfaces the complete history automatically — grouped the way a doctor thinks about it.</p>
+    <p>It is <strong>not</strong> a medical advice app. It does not diagnose, treat, or recommend anything. It is a smart document organiser — like a digital filing cabinet with AI-powered reading and intelligent categorisation.</p>
   </div>
 
   <!-- Features -->
@@ -169,22 +170,42 @@
     <div class="feature-card">
       <div class="icon">🔐</div>
       <h3>Authentication &amp; Security</h3>
-      <p>Email + password login, JWT sessions in Android Keystore, biometric lock (fingerprint/face), bcrypt password hashing.</p>
+      <p>Email + password login, JWT sessions in Android Keystore, biometric lock (fingerprint/face), bcrypt password hashing, OTP password reset.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🖼️</div>
+      <h3>Profile Photos</h3>
+      <p>Upload your profile photo via <strong>camera or gallery</strong>. Long-press to remove. Doctors' photos appear on all link and search cards.</p>
     </div>
     <div class="feature-card">
       <div class="icon">📄</div>
       <h3>Document Upload</h3>
-      <p>Upload PDFs or photos. Shoot directly with the camera or pick from gallery/files. Upload up to <strong>10 files at once</strong>. Assign to yourself or a family member.</p>
+      <p>Upload PDFs or photos. Shoot directly with camera or pick from gallery/files. Upload up to <strong>10 files at once</strong>. Assign to yourself or a family member.</p>
     </div>
     <div class="feature-card">
       <div class="icon">🤖</div>
       <h3>AI Processing</h3>
-      <p>OCR extracts all text (including structured tables). Gemini AI generates plain-English summaries. Supports <strong>Regenerate Insights</strong> to refresh AI output on any existing document.</p>
+      <p>OCR extracts all text (including structured tables). Gemini AI generates plain-English summaries. Supports <strong>Regenerate Insights</strong> on any document.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">⚠️</div>
+      <h3>Document Expiry Alerts</h3>
+      <p>Blood test results flag as expiring after <strong>6 months</strong>, prescriptions after <strong>3 months</strong>. Home screen banner + coloured badge on the document card.</p>
     </div>
     <div class="feature-card">
       <div class="icon">🗂️</div>
       <h3>Smart Organisation</h3>
-      <p>Filter by category chips (including <strong>Imaging</strong>), multi-select filter sheet, filter by family member, full-text search across all document content.</p>
+      <p>Filter by category, multi-select filter sheet, filter by family member, full-text search across all document content.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🧠</div>
+      <h3>Smart Clusters</h3>
+      <p>AI automatically groups documents by <strong>visit episode</strong> (±6 days apart), <strong>condition</strong> (all Thyroid records across all years), <strong>document type + month</strong>, and <strong>calendar month</strong>. Browse in the Clusters screen with four tabs.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">✅</div>
+      <h3>Document Validation</h3>
+      <p>Every upload is checked: (1) is this a health record? (2) does the patient name match your profile? Non-medical docs and name mismatches show an <strong>immediate warning</strong> after upload so you can act right away.</p>
     </div>
     <div class="feature-card">
       <div class="icon">👨‍👩‍👧</div>
@@ -199,12 +220,27 @@
     <div class="feature-card">
       <div class="icon">🔔</div>
       <h3>Reminders &amp; Vaccination</h3>
-      <p>Set document-related reminders with local push notifications. Access a full <strong>WHO/India vaccination schedule</strong> (16 doses) with age-based reminders. Access via ⋮ menu → Reminders.</p>
+      <p>Set document-related reminders with local push notifications. Full <strong>WHO/India vaccination schedule</strong> (16 doses) with age-based reminders.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">👨‍⚕️</div>
+      <h3>Doctor Network</h3>
+      <p>Search and link with registered doctors. Share specific documents securely. Request a <strong>second opinion</strong>. Doctors view shared files from their patients.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📅</div>
+      <h3>Appointment Reminders</h3>
+      <p>Set appointment reminders with <strong>push notifications</strong> for each linked doctor — accessible from your doctor's card.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🗒️</div>
+      <h3>Doctor Notes</h3>
+      <p>Write <strong>private notes</strong> for each linked doctor (symptoms, questions to ask). Never shared with the doctor — visible only to you.</p>
     </div>
     <div class="feature-card">
       <div class="icon">📤</div>
       <h3>Share &amp; Export</h3>
-      <p>Share any document securely via WhatsApp, email, or any app. Includes a "Shared via MyMedVault" footer.</p>
+      <p>Share any document via WhatsApp, email, or any app. Export a full <strong>Health Summary PDF</strong> with all documents and AI insights.</p>
     </div>
   </div>
 
@@ -243,7 +279,9 @@
       <li><strong>Step 2 — AI Summary:</strong> Google Gemini reads the extracted text and writes a plain-English summary including patient info, a structured table of test results (with reference ranges &amp; status), imaging/scan findings, and prescription details with dosage and frequency.</li>
       <li><strong>Step 3 — Categorisation:</strong> AI automatically assigns the document to a category (Lab, Prescription, Imaging, etc.).</li>
       <li><strong>Step 4 — Record Extraction:</strong> Key data points are extracted as structured records (dates, values, names, dosages).</li>
-      <li><strong>Regenerate Insights:</strong> On any existing document, tap the <strong>⋮ (overflow) menu → Regenerate Insights</strong>, or tap the inline button on the Insights tab. A spinner shows progress and you’ll see a success or error message.</li>
+      <li><strong>Step 4 — Validation:</strong> AI checks (a) whether this is a genuine health record — non-medical documents (receipts, invoices, certificates) are flagged immediately after upload, and (b) whether the patient name on the document matches your profile name — a mismatch shows the extracted name so you can decide what to do.</li>
+      <li><strong>Step 5 — Smart Clustering:</strong> The document is automatically assigned to all applicable clusters: <em>episode</em> (±6 days = same visit), <em>condition</em> (all Thyroid / Diabetes records across all years), <em>type + month</em> (all Blood Tests in March 2024), and <em>calendar month</em>.</li>
+      <li><strong>Regenerate Insights:</strong> On any existing document, tap the <strong>⋮ (overflow) menu → Regenerate Insights</strong>. This also rebuilds clusters for that document.</li>
       <li>Wide tables (e.g. full lab panels) are horizontally scrollable on small screens.</li>
       <li>If old documents don't have a category, tap <strong>"Re-analyze Documents"</strong> on the empty category filter state.</li>
     </ul>
@@ -278,8 +316,112 @@
       <li>Contains a full <strong>WHO/India schedule</strong> with 16 standard doses — BCG, Hepatitis B, OPV, DPT, Hib, Rotavirus, PCV, IPV, Measles, MMR, Varicella, and more.</li>
       <li>Each vaccine shows the <strong>recommended age</strong> (e.g. at birth, 6 weeks, 9 months, 5 years).</li>
       <li>Tap any vaccine to set a <strong>local push notification reminder</strong> for the due date.</li>
-      <li>Reminders work for all age groups — both children and adults (booster doses).</li>
       <li>Reminder data is stored <strong>locally on your device</strong> and never sent to our servers.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>⚠️ Document Expiry Alerts</h3>
+    <ul>
+      <li>Blood test results are flagged as <strong>expiring after 6 months</strong> from the upload date.</li>
+      <li>Prescriptions are flagged as <strong>expiring after 3 months</strong>.</li>
+      <li>The home screen shows an <strong>orange "Attention Needed" banner</strong> listing documents that are expiring soon or already expired — tap any row to go directly to that document.</li>
+      <li>A coloured badge also appears on the document detail screen.</li>
+      <li>These are reminders to renew/retest — the app does not prevent access to any document.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>👨‍⚕️ Doctor Network</h3>
+    <ul>
+      <li><strong>For patients:</strong> tap the stethoscope icon (top bar) → <strong>My Doctors</strong>.</li>
+      <li><strong>Search for doctors</strong> by name, specialty, or clinic — tap <strong>Link with Doctor</strong> to send a request.</li>
+      <li>Once the doctor accepts, the link becomes <strong>Active</strong> and you can share documents.</li>
+      <li><strong>Share a document</strong> — open any document → tap <strong>Share with Doctor</strong> → pick your linked doctor → add an optional message.</li>
+      <li>Toggle <strong>"Request Second Opinion"</strong> to flag the document for a second medical view.</li>
+      <li><strong>For doctors:</strong> register via Account → Doctor Profile. Tap the stethoscope icon → <strong>Doctor Hub</strong> to view patient links and shared files.</li>
+      <li>Doctors can browse all documents shared with them, categorised by patient.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>📅 Appointment Reminders</h3>
+    <ul>
+      <li>From <strong>My Doctors</strong> screen, tap the <strong>Appointment</strong> chip on any active doctor card.</li>
+      <li>Pick a date and time — a local push notification is scheduled for that appointment.</li>
+      <li>Each doctor can have multiple reminders. Manage them from the same screen.</li>
+      <li>Reminders are stored locally and never sent to the cloud.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🗒️ Doctor Notes</h3>
+    <ul>
+      <li>From <strong>My Doctors</strong> screen, tap the <strong>Notes</strong> chip on any active doctor card.</li>
+      <li>Write private notes — symptoms, questions to ask, things to remember for your next visit.</li>
+      <li>Notes are <strong>never visible to the doctor</strong>. They are entirely private to you.</li>
+      <li>A preview of your latest note is shown on the doctor card.</li>
+      <li>Notes are stored <strong>locally on your device only</strong> — they are never uploaded to our servers.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🖼️ Profile Photos</h3>
+    <ul>
+      <li>Tap the <strong>account icon</strong> (top-right) to open the Account sheet — your avatar circle is at the top.</li>
+      <li>Tap the avatar to choose: <strong>Take Photo</strong> (camera) or <strong>Choose from Gallery</strong>.</li>
+      <li><strong>Long-press</strong> the avatar to remove the photo and revert to the default icon.</li>
+      <li>Doctors upload their photo via <strong>Account → Doctor Profile</strong> — the avatar picker is at the top of the form.</li>
+      <li>Doctor photos appear on their card in your <strong>My Doctors</strong> list and in the <strong>doctor search</strong> results.</li>
+      <li>Photos are stored securely in Google Cloud Storage — never public.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>📄 Health Summary PDF</h3>
+    <ul>
+      <li>Tap the <strong>account icon</strong> → <strong>Export Health Summary PDF</strong>.</li>
+      <li>Generates a full A4 PDF with your document list, AI insights, and health stats.</li>
+      <li>Share via WhatsApp, email, or save to your device.</li>
+      <li>Useful for taking a summary to a doctor's appointment or keeping an offline backup.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🧠 Smart Clusters</h3>
+    <ul>
+      <li>Access via the <strong>cluster (grid) icon</strong> in the home screen top bar → <strong>Smart Clusters</strong>.</li>
+      <li>Four tabs: <strong>All</strong>, <strong>Condition</strong>, <strong>Type</strong>, <strong>Episode</strong>.</li>
+      <li><strong>Episode clusters:</strong> documents with dates within ±6 days of each other are grouped as the same visit or treatment course. A Blood Test on May 1, a Prescription on May 3, and a scan on May 7 all land in the same episode automatically.</li>
+      <li><strong>Condition clusters:</strong> every document tagged with the same disease (Thyroid, Diabetes, Hypertension, Anaemia, etc.) is grouped across <em>all years</em>. This is the "show my doctor my entire Thyroid history" view — 2009, 2015, 2022 all in one place.</li>
+      <li><strong>Type clusters:</strong> all documents of the same type (Blood Test, Prescription, Imaging) within a month are grouped — useful for tracking progression over time.</li>
+      <li><strong>Month clusters:</strong> all documents dated within the same calendar month are grouped for a chronological view.</li>
+      <li>A document can belong to <em>multiple</em> clusters simultaneously — a Blood Test done during a Thyroid episode will appear in the episode cluster, the Thyroid condition cluster, and the Blood Test type cluster.</li>
+      <li>Tap any cluster to see all its documents. Tap the <strong>timeline icon</strong> (top-right) for a full chronological timeline across all clusters.</li>
+      <li>Clusters are built automatically — nothing to configure.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>✅ Document Validation</h3>
+    <ul>
+      <li>Every uploaded document is automatically validated on two criteria immediately after OCR:</li>
+      <li><strong>Health record check:</strong> AI determines if the file is genuine medical content. Invoices, receipts, certificates, and other non-medical files are flagged with a warning dialog right after upload — the file is still saved but marked for review.</li>
+      <li><strong>Name match check:</strong> AI extracts the patient name from the document and compares it to your registered full name. If they don't match, a warning dialog shows the extracted name so you can verify or delete it.</li>
+      <li>Both issues appear as a <strong>coloured banner</strong> on the document's detail screen with an explanation dialog.</li>
+      <li>The home screen shows an amber <strong>"N documents need your review"</strong> banner when any documents are flagged — tap it to go to those documents.</li>
+      <li><strong>Why this matters:</strong> accidentally uploading someone else's document or a non-medical file won't pollute your medical history or smart clusters.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>✏️ Your Profile Name</h3>
+    <ul>
+      <li>Your full name is required for document validation — it's how AI knows whether uploaded documents belong to you.</li>
+      <li>Set it during <strong>registration</strong> (the first field: "Full name as on your health records").</li>
+      <li>Existing users who registered before v1.6.0 will see a <strong>one-time prompt</strong> on first login asking for their name.</li>
+      <li>Change it anytime: tap the <strong>account icon</strong> → <strong>Edit Name</strong>.</li>
+      <li>Use the exact name as it appears on your medical records (e.g. "Rambabu Kokkiligadda", not a nickname or abbreviation).</li>
     </ul>
   </div>
 
@@ -307,19 +449,28 @@
   <div class="card">
     <ul class="step-list">
       <li><div class="step-num">1</div><div class="step-body"><strong>Become a tester:</strong><br>• <strong>On your Android phone/tablet:</strong> tap <a href="https://play.google.com/store/apps/details?id=io.medvault.app" target="_blank">this Play Store link</a> → tap Install / Update.<br>• <strong>On desktop/web first:</strong> open <a href="https://play.google.com/apps/testing/io.medvault.app" target="_blank">this opt-in link</a> → tap "Become a tester" → then open the Play Store link on your phone.</div></li>
-      <li><div class="step-num">2</div><div class="step-body"><strong>Register</strong> — open the app, create an account with your email and a password.</div></li>
-      <li><div class="step-num">3</div><div class="step-body"><strong>Upload a single document</strong> — tap the + button. Use any PDF or photo (a receipt, report, certificate — anything). Wait ~30 seconds for the AI notification.</div></li>
-      <li><div class="step-num">4</div><div class="step-body"><strong>Try multi-upload</strong> — tap + again and select multiple files (up to 10) at once. Each is processed independently.</div></li>
-      <li><div class="step-num">5</div><div class="step-body"><strong>Try camera scan</strong> — tap + → Camera. Take a photo of any document page. It uploads and processes just like a gallery file.</div></li>
-      <li><div class="step-num">6</div><div class="step-body"><strong>View a document</strong> — tap it to see the original file, AI summary (with structured table), and extracted data records.</div></li>
-      <li><div class="step-num">7</div><div class="step-body"><strong>Regenerate Insights</strong> — on any document detail page, tap the <strong>⋮ (overflow) menu → Regenerate Insights</strong>. A spinner appears and the Insights tab refreshes with updated AI output.</div></li>
-      <li><div class="step-num">8</div><div class="step-body"><strong>Try search</strong> — tap the magnifier icon and type a word from your document. Tap the result to navigate to it.</div></li>
-      <li><div class="step-num">9</div><div class="step-body"><strong>Try category filters</strong> — tap the category chips on the home screen. Tap the filter icon for the multi-select sheet to combine categories.</div></li>
-      <li><div class="step-num">10</div><div class="step-body"><strong>Add a family member</strong> — account icon → Add Family Member. Upload a document for them. Switch profiles using the top chips. Notice the person name pill on each card.</div></li>
-      <li><div class="step-num">11</div><div class="step-body"><strong>Try biometric lock</strong> — minimise the app and reopen it. It should ask for your fingerprint/face.</div></li>
-      <li><div class="step-num">12</div><div class="step-body"><strong>Try trends</strong> — tap the chart icon in the top bar on the home screen.</div></li>
-      <li><div class="step-num">13</div><div class="step-body"><strong>Try reminders</strong> — tap the ⋮ menu → Reminders → add a reminder for a document.</div></li>
-      <li><div class="step-num">14</div><div class="step-body"><strong>Try vaccination reminders</strong> — tap the ⋮ menu → Vaccination Reminders. Browse the WHO/India schedule and tap a vaccine to set a notification reminder.</div></li>
+      <li><div class="step-num">2</div><div class="step-body"><strong>Register</strong> — open the app, enter your <strong>full name as it appears on your health records</strong> (first field), then email and password. Your name is used to verify that uploaded documents belong to you.</div></li>
+      <li><div class="step-num">3</div><div class="step-body"><strong>Existing users — set your name:</strong> if you registered before v1.6.0, you'll see a one-time prompt on first login. Enter your full name as it appears on your medical records.</div></li>
+      <li><div class="step-num">4</div><div class="step-body"><strong>Add a profile photo</strong> — tap the account icon (top-right). Tap your avatar → choose <strong>Take Photo</strong> or <strong>Choose from Gallery</strong>. You should see your photo appear immediately.</div></li>
+      <li><div class="step-num">5</div><div class="step-body"><strong>Upload a document with your name on it</strong> — tap the + button. Use a lab report or prescription that has your name. After ~20–30 seconds you should see a success message.</div></li>
+      <li><div class="step-num">6</div><div class="step-body"><strong>Test document validation:</strong><br>• Upload a non-medical file (a receipt, screenshot, invoice) — you should see a <strong>"Non-Medical Document"</strong> warning dialog immediately after upload.<br>• Upload a document with a different person's name — you should see a <strong>"Name Mismatch"</strong> warning showing the extracted name.</div></li>
+      <li><div class="step-num">7</div><div class="step-body"><strong>Try multi-upload</strong> — tap + and select multiple files (up to 10) at once.</div></li>
+      <li><div class="step-num">8</div><div class="step-body"><strong>Try camera scan</strong> — tap + → Camera. Take a photo of any document page.</div></li>
+      <li><div class="step-num">9</div><div class="step-body"><strong>View a document</strong> — tap it to see the original file, AI summary (with structured table), and extracted records. If it was flagged, you'll see a coloured banner at the top.</div></li>
+      <li><div class="step-num">10</div><div class="step-body"><strong>Explore Smart Clusters</strong> — after uploading a few documents, tap the <strong>cluster (grid) icon</strong> in the home screen top bar.<br>• <strong>Condition tab:</strong> see all documents grouped by disease (Thyroid, Diabetes, etc.) across all years.<br>• <strong>Episode tab:</strong> documents within ±6 days are automatically grouped as the same hospital visit.<br>• <strong>Type tab:</strong> Blood Tests, Prescriptions, etc. grouped by month.<br>• Tap the timeline icon (top-right) for the full chronological view.</div></li>
+      <li><div class="step-num">11</div><div class="step-body"><strong>Check the review banner</strong> — if you have flagged documents, look for the amber <strong>"N documents need your review"</strong> banner on the home screen. Tap it to go to those documents.</div></li>
+      <li><div class="step-num">12</div><div class="step-body"><strong>Check expiry alerts</strong> — if you have a Blood Test or Prescription older than 3–6 months, look for the orange "Attention Needed" banner on the home screen.</div></li>
+      <li><div class="step-num">13</div><div class="step-body"><strong>Edit your name</strong> — account icon → <strong>Edit Name</strong>. Change it and re-upload a document to confirm name matching updates.</div></li>
+      <li><div class="step-num">14</div><div class="step-body"><strong>Regenerate Insights</strong> — on any document detail page, tap the <strong>⋮ menu → Regenerate Insights</strong>. This also rebuilds smart clusters for that document.</div></li>
+      <li><div class="step-num">15</div><div class="step-body"><strong>Try search</strong> — tap the magnifier icon and type a word from your document (e.g. a test name or a diagnosis).</div></li>
+      <li><div class="step-num">16</div><div class="step-body"><strong>Try category filters</strong> — tap the category chips on the home screen or use the filter sheet to combine multiple categories.</div></li>
+      <li><div class="step-num">17</div><div class="step-body"><strong>Add a family member</strong> — account icon → Family Profiles. Upload a document for them and switch profiles using the chips.</div></li>
+      <li><div class="step-num">18</div><div class="step-body"><strong>Export Health Summary PDF</strong> — account icon → <strong>Export Health Summary PDF</strong>. Share it via WhatsApp or email.</div></li>
+      <li><div class="step-num">19</div><div class="step-body"><strong>Try biometric lock</strong> — minimise the app and reopen it. It should ask for your fingerprint/face.</div></li>
+      <li><div class="step-num">20</div><div class="step-body"><strong>Try trends</strong> — tap the chart icon in the top bar on the home screen.</div></li>
+      <li><div class="step-num">21</div><div class="step-body"><strong>Try vaccination reminders</strong> — tap the syringe icon in the top bar → browse the WHO/India schedule and tap a vaccine to set a reminder.</div></li>
+      <li><div class="step-num">22</div><div class="step-body"><strong>Test Doctor Network (as a patient):</strong><br>• Tap the stethoscope icon → <strong>Find a Doctor</strong> → search for a doctor.<br>• Tap <strong>Link with Doctor</strong> → wait for acceptance.<br>• Once active: share a document with them, add a private note, set an appointment reminder.</div></li>
+      <li><div class="step-num">23</div><div class="step-body"><strong>Test Doctor Network (as a doctor):</strong><br>• Account icon → <strong>Doctor Profile</strong> → fill in your details → add your photo at the top → Save.<br>• Tap the stethoscope icon → <strong>Doctor Hub</strong> to see patient links and shared documents.</div></li>
     </ul>
   </div>
 
@@ -360,6 +511,7 @@
       <tbody>
         <tr><td>Your account &amp; email address</td><td>Immediately</td><td>No — permanently gone</td></tr>
         <tr><td>All uploaded documents (files)</td><td>Immediately</td><td>No — permanently gone</td></tr>
+        <tr><td>Profile photo</td><td>Immediately</td><td>No — permanently gone</td></tr>
         <tr><td>All AI summaries &amp; extracted records</td><td>Immediately</td><td>No — permanently gone</td></tr>
         <tr><td>Server access logs</td><td>Not individually deletable</td><td>Auto-purged after 30 days (Cloud Run default)</td></tr>
       </tbody>
@@ -387,18 +539,23 @@
   <div class="card">
     <ul>
       <li>iOS version not yet available — Android only</li>
+      <li>Smart Clusters are built at upload time — existing documents uploaded before v1.6.0 won't have clusters until regenerated (⋮ menu → Regenerate Insights on each document)</li>
+      <li>Name matching uses word-overlap — very short names (&lt;3 characters) may not match reliably; use your full name as it appears on your records</li>
       <li>Trends require at least 2 documents with numeric values to display charts</li>
       <li>AI processing requires an active internet connection</li>
       <li>Very large PDFs (&gt;20 MB) may take longer to process</li>
       <li>Camera scan files over 10 MB are rejected — use gallery or compress the image first</li>
       <li>Vaccination reminder notifications require the <strong>exact alarm permission</strong> to be granted on Android 12+ (the app will prompt you)</li>
+      <li>Profile photos require camera permission to take a photo (the app will prompt you on first use)</li>
+      <li>Expiry thresholds are based on upload date — not the date printed on the document</li>
+      <li>Doctor Network requires both patient and doctor to use the app; doctors must complete their profile first</li>
     </ul>
   </div>
 
 </main>
 
 <footer>
-  &copy; 2026 CloudNova &nbsp;|&nbsp;
+  &copy; 2026 CloudNova &nbsp;|&nbsp; v1.6.0 &nbsp;|&nbsp;
   <a href="https://docs.cloudnova.one/privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
   <a href="https://docs.cloudnova.one/data-deletion.html">Data Deletion</a> &nbsp;|&nbsp;
   <a href="mailto:support@cloudnova.one">Contact</a>
